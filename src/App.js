@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState, useEffect } from "react";
+import Switch from "./components/Switch";
 function App() {
+  const [theme, setTheme] = useState(false);
+
+  useEffect(() => {
+    const themeTypeToAdd = theme ? "dark-mode" : "light-mode";
+    const themeTypeToRemove = !theme ? "dark-mode" : "light-mode";
+
+    document.querySelector("body").classList.add(themeTypeToAdd);
+    document.querySelector("body").classList.remove(themeTypeToRemove);
+  }, [theme]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      Pokemon Reack / Bulbasaur
+      <Switch onChange={() => setTheme(!theme)} />
+      <div>
+        <button onClick={() => setTheme(!theme)}>Top</button>
+      </div>
     </div>
   );
 }

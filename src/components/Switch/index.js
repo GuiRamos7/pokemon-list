@@ -1,9 +1,9 @@
 import React from "react";
 import * as S from "./styled";
 
-const Switch = ({ onChange }) => {
+const Switch = ({ onChange, className }) => {
   return (
-    <S.Switch class="switchSmall2 m5">
+    <S.Switch className={`switchSmall2 m5 ${className}`}>
       <input type="checkbox" onChange={onChange} />
     </S.Switch>
   );

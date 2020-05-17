@@ -1,24 +1,15 @@
-import React, { useState, useEffect } from "react";
-import Switch from "./components/Switch";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Home } from "pages";
 function App() {
-  const [theme, setTheme] = useState(false);
-
-  useEffect(() => {
-    const themeTypeToAdd = theme ? "dark-mode" : "light-mode";
-    const themeTypeToRemove = !theme ? "dark-mode" : "light-mode";
-
-    document.querySelector("body").classList.add(themeTypeToAdd);
-    document.querySelector("body").classList.remove(themeTypeToRemove);
-  }, [theme]);
-
   return (
-    <div className="App">
-      Pokemon Reack / Bulbasaur
-      <Switch onChange={() => setTheme(!theme)} />
-      <div>
-        <button onClick={() => setTheme(!theme)}>Top</button>
-      </div>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/home">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

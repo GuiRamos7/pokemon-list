@@ -5,14 +5,14 @@ body {
   font-size: 20px;
   font-weight: 500;
   font-style: italic;
-  transition: 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
 }
 
 body.dark-mode {
-  background-color: #403f5a !important;
-  color: #f92b2b !important;
+  background-color: #202020 !important;
+  color: #fff !important;
 }
 body.light-mode {
-  background-color: #f0f0ff !important;
-  color: #3a33c7 !important;
+  background-color: #ffffff !important;
+  color: #202020 !important;
 }

@@ -9,18 +9,10 @@ export const HeaderContainer = styled.div`
   flex-direction: column;
   position: relative;
   .title {
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: 900;
     margin-bottom: 0 !important;
-    @media only screen and (max-width: 480px) {
-      font-size: 2.5rem;
-    }
-  }
-  .description {
-    @media only screen and (max-width: 480px) {
-      font-size: 16px;
-    }
-    font-size: 13px;
+    border-bottom: 2px solid #3500d3;
   }
   .switch {
     position: absolute;

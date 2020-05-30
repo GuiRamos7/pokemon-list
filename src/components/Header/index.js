@@ -15,7 +15,6 @@ const Header = () => {
   return (
     <S.HeaderContainer>
       <p className="title">React Pokemon</p>
-      <p className="description">Find your favorite pokemon here</p>
       <Switch className="switch" onChange={() => setTheme(!theme)} />
     </S.HeaderContainer>
   );

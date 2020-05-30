@@ -1,10 +1,11 @@
 import React from "react";
-import { Header } from "components";
+import { Header, PokemonItem } from "components";
 
 const Home = () => {
   return (
     <div>
       <Header />
+      <PokemonItem />
     </div>
   );
 };

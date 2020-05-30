@@ -26,7 +26,7 @@ export const Switch = styled.label`
       transition: 0.2s ease-in-out left;
     }
     &:checked::before {
-      background: #404040;
+      background: #3500d3;
     }
     &:checked::after {
       content: "";
